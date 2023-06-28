@@ -6,12 +6,18 @@
     border: 1px solid red;
 }
 
+button {
+    outline: none;
+    color: purple;
+    font-size: 1.3em;
+}
+
 .outer-container {
     padding: 10px;
 }
 
-.top-bar button {
-    
+.top-bar p {
+    float: right;
 }
 
 
