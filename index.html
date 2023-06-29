@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Web APIs code quiz</title>
-</head>
+  </head>
 
-<body>
-<!--main outer div-->
-    <div class="outer-container">
-<!--top bar section-->        
-        <div class="top-bar"> 
-            <button>View Highscores</button>
-            <p>Timer: 00:00</p>
-        </div>
-        <!--inner div-->
-        <div class="inner-container">
-<!--main header/quiz intro-->
-<header class="quiz-intro">
-
-</header>
-<!--main quiz content-->
-<main>
-
-</main>
-
-        </div>
+  <body>
+    <!--top bar section-->
+    <div class="top-bar">
+      <button>View Highscores</button>
+      <p>Timer: <span id="timer">75</span></p>
     </div>
-</body>
+<div id="quiz-container">
+    <main>
+      <section id="title">
+        <h1 id="title-heading">Code Quiz Challenge</h1>
+        <p id="quiz-intro">
+          Try to answer the following code-related questions withtin the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds
+        </p>
+      </section>
+      <section id="content"></section>
+      <section id="result"></section>
+    </main>
+  </div>
+    <script src="script.js"></script>
+  </body>
 </html>

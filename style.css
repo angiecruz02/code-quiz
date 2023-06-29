@@ -2,19 +2,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    border: 1px solid red;
 }
 
-.outer-container {
-    padding: 10px;
+button {
+    outline: none;
+    color: purple;
+    font-size: 1.3em;
 }
 
-.top-bar button {
-    
+#quiz-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
 }
 
+main {
+    text-align: center;
+    width: 50%;
+}
 
+main p {
+    font-size: 22px;
+}
+
+main h1 {
+    font-size: 35px;
+}
+
+.top-bar {
+    margin: 20px 35px;
+}
+.top-bar p {
+    float: right;
+}
+
+#content {
+    margin: 20px;
+}
 
 
 
