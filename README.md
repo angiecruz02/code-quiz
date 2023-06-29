@@ -23,9 +23,6 @@ The JavaScript Quiz Game includes the following features:
 
 ## ScreenShot
 
-
+<img width="1424" alt="Screen Shot 2023-06-28 at 11 36 04 PM" src="https://github.com/angiecruz02/code-quiz/assets/33271291/d7b707a8-d924-42a8-8023-0f4016361a9b">
 
 ## Link to deployed application
-
-
-
