@@ -60,7 +60,6 @@ function decrementTime(numOfSeconds) {
   }
   var num = timer.innerText;
   if (num === "0") {
-    console.log("stopTimer");
     clearInterval(interval);
     return;
   }
@@ -69,13 +68,9 @@ function decrementTime(numOfSeconds) {
 
 function evaluate(answer, index) {
   var correctAnswer = questionsArray[index].correctAnswerIndex;
-  console.log("correctAnswer", correctAnswer);
-  console.log("answer", answer);
-  console.log(answer == correctAnswer);
   return answer == correctAnswer;
 }
 function submitAnswer(answer, currentQuestionIndex) {
-  console.log("answer=", answer);
   // clear previous result
   document.getElementById("result").replaceChildren([]);
   //evaluate answer
@@ -102,7 +97,6 @@ var currentScore = Number(timer.innerText)
 }
 
 function beginQuiz() {
-  console.log("beginQuiz");
   startTimer();
   // deleting quiz-intro element from the html
   document.getElementById("quiz-intro").remove();
@@ -117,7 +111,6 @@ function goToNextQuestion(questionIndex) {
     return;
   }
   var currentQuestion = questionsArray[questionIndex];
-  console.log("currentQuestion", currentQuestion);
   // update the title-heading element inner text to the currentQuestion questionText
   document.getElementById("title-heading").innerText =
     currentQuestion["questionText"];
@@ -126,7 +119,6 @@ function goToNextQuestion(questionIndex) {
 
   // create option buttons and add them to html and we are going to use a loop for it
   var answerOptions = currentQuestion["options"];
-  console.log(answerOptions);
   for (var i = 0; i < answerOptions.length; i++) {
     var optionText = answerOptions[i];
     var answerButton = createButton(
@@ -141,7 +133,6 @@ function showResult() {
   // stop timer
   clearInterval(interval);
   var score = timer.innerText;
-  console.log(score);
   // replace title heading with all done
   document.getElementById("title-heading").innerText = "All done!";
   // create a paragraph element saying "your final score is + score"
@@ -186,7 +177,6 @@ function saveHighScore() {
   var initials = document.getElementById("initial-input").value;
   var scoreEntry = `${initials} - ${timer.innerText}`;
   highScores.push(scoreEntry);
-  console.log(highScores);
   // call function showHighScores()
   showHighScores();
 }
@@ -219,8 +209,6 @@ function createButton(buttonText, onclickValue) {
 // build start button
 
 var startButton = createButton("start", "beginQuiz()");
-console.log("startButton", startButton);
-console.log("startValue", startButton.innerText);
 
 // add button to HTML
 document.getElementById("content").appendChild(startButton);
